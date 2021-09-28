@@ -7,7 +7,7 @@ python3Packages.buildPythonApplication rec {
   src = pyjulia-flake;
 
   meta = with lib; {
-    inherit (pyjulia-flake) homepage description version;
+    inherit (pyjulia-flake) version;
     license = licenses.mit;
   };
 }
