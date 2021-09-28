@@ -47,7 +47,23 @@
         "type": "github"
       }
     },
-    "pylatex_src": {
+    "pyjulia-flake": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1606599412,
+        "narHash": "sha256-6xogROj++nkVpZK8wxdJcxFhUrXTl3P4A3Nt4JJhz2I=",
+        "owner": "JuliaPy",
+        "repo": "pyjulia",
+        "rev": "87c669e2729f9743fe2ab39320ec9b91c9300a96",
+        "type": "github"
+      },
+      "original": {
+        "owner": "JuliaPy",
+        "repo": "pyjulia",
+        "type": "github"
+      }
+    },
+    "pylatex-flake": {
       "flake": false,
       "locked": {
         "lastModified": 1625904937,
@@ -68,7 +84,8 @@
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
-        "pylatex_src": "pylatex_src"
+        "pyjulia-flake": "pyjulia-flake",
+        "pylatex-flake": "pylatex-flake"
       }
     }
   },
