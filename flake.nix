@@ -16,7 +16,9 @@
           overlay = import ./pkgs;
           pkgs = import nixpkgs {
             inherit system;
-            overlays = [ overlay ];
+            overlays = [
+              overlay
+            ];
           };
         in
         {
@@ -25,6 +27,9 @@
               pkgs.python39
               pkgs.pyjulia
               pkgs.pylatex
+
+              # not working yet
+              # pkgs.gowrap
             ];
           };
         });
