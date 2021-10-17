@@ -25,9 +25,6 @@
           devShell = pkgs.mkShell {
             packages = [
               pkgs.python39
-              pkgs.pyjulia
-              pkgs.pylatex
-
               # not working yet
               # pkgs.gowrap
             ];

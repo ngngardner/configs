@@ -8,7 +8,7 @@ python3Packages.buildPythonApplication rec {
     owner = "JuliaPy";
     repo = "pyjulia";
     rev = "v${version}";
-    sha256 = "0qngc69f0vbk0gw775yknm9624bk94bw7g4jllapkypyx12206pb";
+    sha256 = sha256:7JE8xKryf7sjvlUjDH7jUMm7CyirjPbmWo+reWeGIlc=;
   };
 
   meta = with lib; {
