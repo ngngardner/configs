@@ -5,13 +5,14 @@ buildGoModule rec {
   version = "1.2.1";
 
   src = fetchFromGitHub {
-    owner = "hexdigest";
+    owner = "ngngardner";
     repo = "gowrap";
-    rev = "v${version}";
-    sha256 = "0lnzigrzzsdxm7krh3hvs35xc2qwh0ks7y5dp6xw5js7a5ds7gkp";
+    rev = "bfffa3d31d93d3a8babb6efb12595abf2fd66e4f";
+    sha256 = sha256:trqxzzdbrky4ZbobdN+g/z7VrVIvx8TAGpYUqkkJJfc=;
   };
 
-  vendorSha256 = sha256:ymEKGF8W5ZjQtRh8jec7gfPkyMb0m3nbgm3GqcjUG+Q=;
+  vendorSha256 = sha256:8UdPq1e0db1WAX35vS8eZoN2OjM6hCZSBGrc2km1v2Y=;
+  CGO_ENABLED = 0;
 
   meta = with lib; {
     inherit version;

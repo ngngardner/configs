@@ -6,10 +6,9 @@
       url = "github:NixOS/nixpkgs/d189bf92f9be23f9b0f6c444f6ae29351bb7125c";
     };
     utils = { url = "github:numtide/flake-utils"; };
-    compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = { self, nixpkgs, utils, compat }:
+  outputs = { self, nixpkgs, utils }:
     utils.lib.eachDefaultSystem
       (system:
         let
@@ -25,8 +24,7 @@
           devShell = pkgs.mkShell {
             packages = [
               pkgs.python39
-              # not working yet
-              # pkgs.gowrap
+              pkgs.gowrap
             ];
           };
         });
