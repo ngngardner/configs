@@ -3,10 +3,16 @@
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
-  inputs.devshell.url = "github:numtide/devshell";
-  inputs.devshell.inputs.flake-utils.follows = "flake-utils";
-  inputs.home-manager.url = "github:nix-community/home-manager";
-  inputs.home-manager.inputs.nixpkgs.follows = "nixpkgs";
+  inputs.devshell = {
+    url = "github:numtide/devshell";
+    inputs.nixpkgs.follows = "nixpkgs";
+    inputs.flake-utils.follows = "flake-utils";
+  };
+  inputs.home-manager = {
+    url = "github:nix-community/home-manager";
+    inputs.nixpkgs.follows = "nixpkgs";
+    inputs.utils.follows = "flake-utils";
+  };
   inputs.rtx-flake = {
     url = "github:chadac/rtx/add-nix-flake";
     inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +28,6 @@
     ...
   }: let
     system = "x86_64-linux";
-    # pkgs = nixpkgs.legacyPackages.${system};
     pkgs = import nixpkgs {
       inherit system;
       overlays = [
