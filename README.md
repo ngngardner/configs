@@ -1,3 +1,1 @@
-# configs
-
-custom overlays etc.
+home-manager switch --flake '.#noah'
