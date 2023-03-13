@@ -1,3 +1,4 @@
-# https://numtide.github.io/devshell
 [[commands]]
-package = "devshell.hello"
+help = "switch homemanager shortcut"
+name = "switch"
+command = "home-manager switch --flake '.#noah'"

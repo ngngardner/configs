@@ -12,6 +12,7 @@ in {
       direnv
       julia-bin
       rtx
+      pre-commit
     ];
 
     username = username;

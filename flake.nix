@@ -38,7 +38,7 @@
       ];
     };
 
-    devShell = pkgs.devshell.mkShell {
+    devShell.${system} = pkgs.devshell.mkShell {
       imports = [(pkgs.devshell.importTOML ./devshell.toml)];
     };
   };
