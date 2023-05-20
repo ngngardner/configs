@@ -1,1 +1,8 @@
 .direnv
+
+# nixago: ignore-linked-files
+/treefmt.toml
+/.vscode/settings.json
+/.editorconfig
+/lefthook.yml
+/.conform.yaml

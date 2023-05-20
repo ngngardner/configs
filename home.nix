@@ -1,18 +1,22 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   username = "noah";
   homedir = "/home/noah";
 in {
   home = {
     packages = with pkgs; [
+      # tooling
       alejandra
       direnv
-      julia-bin
+      nil
+      ripgrep
+      treefmt
+      conform
+
+      # for non-nix projects
       rtx
-      pre-commit
+
+      # langs
+      julia-bin
     ];
 
     username = username;
@@ -28,7 +32,7 @@ in {
       enable = true;
       initExtra = ''
         . "/home/noah/.nix-profile/etc/profile.d/nix.sh"
-        eval "$(rtx activate bash)"
+        # eval "$(rtx activate bash)"
 
         if which direnv &> /dev/null; then
           eval "$(direnv hook $SHELL)"

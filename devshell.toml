@@ -1,4 +1,0 @@
-[[commands]]
-help = "switch homemanager shortcut"
-name = "switch"
-command = "home-manager switch --flake '.#noah'"
