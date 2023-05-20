@@ -74,7 +74,13 @@
         };
 
         devShells.default = pkgs.mkShell {
-          shellHook = (nixago.lib.${system}.makeAll configs).shellHook;
+          packages = [
+            pkgs.lefthook
+          ];
+          shellHook = ''
+            ${(nixago.lib.${system}.makeAll configs).shellHook}
+            ${pkgs.lefthook}/bin/lefthook install
+          '';
         };
 
         legacyPackages = {
