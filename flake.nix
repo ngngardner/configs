@@ -9,7 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nixago = {
       url = "github:jmgilman/nixago";
@@ -80,7 +81,7 @@
           homeConfigurations.noah = home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
             modules = [
-              ./home.nix
+              ./nix/home/home.nix
             ];
           };
         };
