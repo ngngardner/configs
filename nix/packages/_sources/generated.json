@@ -1,0 +1,41 @@
+{
+    "rome": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "rome",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rome",
+            "repo": "tools",
+            "rev": "v10.0.7-beta.8",
+            "sha256": "sha256-AcCrPeOMAoKYEC4EDcd8RSlRw5VCLEiMUkf2RUVD/24=",
+            "type": "github"
+        },
+        "version": "v10.0.7-beta.8"
+    },
+    "rome-latest": {
+        "cargoLocks": null,
+        "date": "2023-05-19",
+        "extract": null,
+        "name": "rome-latest",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "ab3524889a0dd82d640797cbd2c5b2fadf246d70",
+            "sha256": "sha256-LpTPdllKNBb6thbP8VZrbUca/LDms9O9PglGqUTQAG0=",
+            "type": "git",
+            "url": "https://github.com/rome/tools"
+        },
+        "version": "ab3524889a0dd82d640797cbd2c5b2fadf246d70"
+    }
+}

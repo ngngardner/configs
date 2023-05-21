@@ -17,6 +17,7 @@ in {
       ripgrep
       treefmt
       conform
+      rome
 
       # for non-nix projects
       rtx
@@ -41,6 +42,11 @@ in {
       enable = true;
       nix-direnv.enable = true;
       stdlib = l.readFile ./direnvrc;
+    };
+    git = {
+      enable = true;
+      userName = "Noah Gardner";
+      userEmail = "ngngardner@gmail.com";
     };
   };
 }

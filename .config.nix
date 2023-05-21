@@ -66,16 +66,27 @@
           includes = [
             "*.css"
             "*.html"
-            "*.js"
-            "*.json"
             "*.jsx"
-            "*.md"
+            # "*.md"
             "*.mdx"
             "*.scss"
-            "*.ts"
             "*.yaml"
           ];
         };
+        # rome = {
+        #   command = "${pkgs.rome-latest}/bin/rome";
+        #   options = [
+        #     "format"
+        #     "--write"
+        #     "indent-style=space"
+        #     "indent-size=2"
+        #   ];
+        #   includes = [
+        #     "*.js"
+        #     "*.json"
+        #     "*.ts"
+        #   ];
+        # };
       };
     };
   };

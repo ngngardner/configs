@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of Jane Doe";
+  description = "My Home Manager configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -26,6 +26,10 @@
     };
     nil = {
       url = "github:oxalica/nil";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    naersk = {
+      url = "github:nix-community/naersk";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -66,7 +70,9 @@
             cudaSupport = true;
           };
           overlays = [
+            (import ./nix/packages/overlays.nix)
             inputs.rtx-flake.overlay
+            inputs.naersk.overlay
             (_: _: {
               nil = inputs'.nil.packages.default;
             })
@@ -75,11 +81,12 @@
 
         devShells.default = pkgs.mkShell {
           packages = [
+            pkgs.rome
             pkgs.lefthook
+            pkgs.nvfetcher
           ];
           shellHook = ''
             ${(nixago.lib.${system}.makeAll configs).shellHook}
-            ${pkgs.lefthook}/bin/lefthook install
           '';
         };
 
