@@ -1,3 +1,7 @@
 [rome]
 src.git = "https://github.com/rome/tools"
 fetch.git = "https://github.com/rome/tools"
+
+[wemake-python-styleguide]
+src.git = "https://github.com/wemake-services/wemake-python-styleguide"
+fetch.git = "https://github.com/wemake-services/wemake-python-styleguide"

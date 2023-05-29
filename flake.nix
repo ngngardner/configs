@@ -32,6 +32,10 @@
       url = "github:nix-community/naersk";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    poetry2nix = {
+      url = "github:nix-community/poetry2nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: let
@@ -75,6 +79,7 @@
             inputs.naersk.overlay
             (_: _: {
               nil = inputs'.nil.packages.default;
+              poetry2nix = inputs'.poetry2nix.legacyPackages;
             })
           ];
         };
@@ -84,6 +89,10 @@
             pkgs.rome
             pkgs.lefthook
             pkgs.nvfetcher
+
+            (pkgs.python3.withPackages (ps: [
+              pkgs.wemake-python-styleguide
+            ]))
           ];
           shellHook = ''
             ${(nixago.lib.${system}.makeAll configs).shellHook}
@@ -102,6 +111,7 @@
     };
 
   nixConfig = {
+    max-jobs = "auto";
     extra-experimental-features = "nix-command flakes";
     extra-substituters = [
       "https://nix-community.cachix.org"

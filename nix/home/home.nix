@@ -19,6 +19,11 @@ in {
       conform
       rome
 
+      # python
+      (pkgs.python3.withPackages (ps: [
+        pkgs.wemake-python-styleguide
+      ]))
+
       # for non-nix projects
       rtx
 

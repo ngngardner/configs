@@ -7,15 +7,28 @@
 }: {
   rome = {
     pname = "rome";
-    version = "ab3524889a0dd82d640797cbd2c5b2fadf246d70";
+    version = "422eb7f6f422193d2c06b12958a20634380ce588";
     src = fetchgit {
       url = "https://github.com/rome/tools";
-      rev = "ab3524889a0dd82d640797cbd2c5b2fadf246d70";
+      rev = "422eb7f6f422193d2c06b12958a20634380ce588";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-Cy0R1bYWA+p6pLeH5XzsNcYx89+tcSt3RA4RRrW7fLs=";
+      sha256 = "sha256-rxd1O9EsZVbj2Qve7T/KfM3atpkPztlS/G3C/MaoxX0=";
     };
-    date = "2023-05-19";
+    date = "2023-05-29";
+  };
+  wemake-python-styleguide = {
+    pname = "wemake-python-styleguide";
+    version = "20b010ff8aa2c0a2486d83bc064aa0350eaa8ec2";
+    src = fetchgit {
+      url = "https://github.com/wemake-services/wemake-python-styleguide";
+      rev = "20b010ff8aa2c0a2486d83bc064aa0350eaa8ec2";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sha256 = "sha256-lQ6V6AcpfMcC3Q6J9cSDVxEzd5aKvyyJ8tpD+IjUCrU=";
+    };
+    date = "2023-05-29";
   };
 }
