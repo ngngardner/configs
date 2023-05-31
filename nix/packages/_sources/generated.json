@@ -1,7 +1,7 @@
 {
     "rome": {
         "cargoLocks": null,
-        "date": "2023-05-29",
+        "date": "2023-05-31",
         "extract": null,
         "name": "rome",
         "passthru": null,
@@ -11,16 +11,16 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "422eb7f6f422193d2c06b12958a20634380ce588",
-            "sha256": "sha256-4xK+wIPd+obrvQhDsgD6AWpj2uK6lgKjxIxa0a4Xf3A=",
+            "rev": "665bb9d810b4ebf4ea82b72df20ad79b8fa3a3d0",
+            "sha256": "sha256-SKq86nbTmMnSuRwCkrpNywPLUAMhf5pS3bmtFe4YuPE=",
             "type": "git",
             "url": "https://github.com/rome/tools"
         },
-        "version": "422eb7f6f422193d2c06b12958a20634380ce588"
+        "version": "665bb9d810b4ebf4ea82b72df20ad79b8fa3a3d0"
     },
     "wemake-python-styleguide": {
         "cargoLocks": null,
-        "date": "2023-05-29",
+        "date": "2023-05-31",
         "extract": null,
         "name": "wemake-python-styleguide",
         "passthru": null,
@@ -30,11 +30,11 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "20b010ff8aa2c0a2486d83bc064aa0350eaa8ec2",
-            "sha256": "sha256-rxd1O9EsZVbj2Qve7T/KfM3atpkPztlS/G3C/MaoxX0=",
+            "rev": "7a112bb8b95a59027611af026a4807871f7e323e",
+            "sha256": "sha256-EQ6cgie2Rxo4hXkcWSKgToULWFWWF/aSh/BennJiyUo=",
             "type": "git",
             "url": "https://github.com/wemake-services/wemake-python-styleguide"
         },
-        "version": "20b010ff8aa2c0a2486d83bc064aa0350eaa8ec2"
+        "version": "7a112bb8b95a59027611af026a4807871f7e323e"
     }
 }

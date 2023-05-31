@@ -7,28 +7,28 @@
 }: {
   rome = {
     pname = "rome";
-    version = "422eb7f6f422193d2c06b12958a20634380ce588";
+    version = "665bb9d810b4ebf4ea82b72df20ad79b8fa3a3d0";
     src = fetchgit {
       url = "https://github.com/rome/tools";
-      rev = "422eb7f6f422193d2c06b12958a20634380ce588";
+      rev = "665bb9d810b4ebf4ea82b72df20ad79b8fa3a3d0";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-rxd1O9EsZVbj2Qve7T/KfM3atpkPztlS/G3C/MaoxX0=";
+      sha256 = "sha256-SKq86nbTmMnSuRwCkrpNywPLUAMhf5pS3bmtFe4YuPE=";
     };
-    date = "2023-05-29";
+    date = "2023-05-31";
   };
   wemake-python-styleguide = {
     pname = "wemake-python-styleguide";
-    version = "20b010ff8aa2c0a2486d83bc064aa0350eaa8ec2";
+    version = "7a112bb8b95a59027611af026a4807871f7e323e";
     src = fetchgit {
       url = "https://github.com/wemake-services/wemake-python-styleguide";
-      rev = "20b010ff8aa2c0a2486d83bc064aa0350eaa8ec2";
+      rev = "7a112bb8b95a59027611af026a4807871f7e323e";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-lQ6V6AcpfMcC3Q6J9cSDVxEzd5aKvyyJ8tpD+IjUCrU=";
+      sha256 = "sha256-EQ6cgie2Rxo4hXkcWSKgToULWFWWF/aSh/BennJiyUo=";
     };
-    date = "2023-05-29";
+    date = "2023-05-31";
   };
 }
