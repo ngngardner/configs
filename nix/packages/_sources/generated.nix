@@ -5,30 +5,17 @@
   fetchFromGitHub,
   dockerTools,
 }: {
-  rome = {
-    pname = "rome";
-    version = "665bb9d810b4ebf4ea82b72df20ad79b8fa3a3d0";
-    src = fetchgit {
-      url = "https://github.com/rome/tools";
-      rev = "665bb9d810b4ebf4ea82b72df20ad79b8fa3a3d0";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sha256 = "sha256-SKq86nbTmMnSuRwCkrpNywPLUAMhf5pS3bmtFe4YuPE=";
-    };
-    date = "2023-05-31";
-  };
   wemake-python-styleguide = {
     pname = "wemake-python-styleguide";
-    version = "7a112bb8b95a59027611af026a4807871f7e323e";
+    version = "69bb6f47aeb0f6a74c05e05960fc3da5b33edc6b";
     src = fetchgit {
       url = "https://github.com/wemake-services/wemake-python-styleguide";
-      rev = "7a112bb8b95a59027611af026a4807871f7e323e";
+      rev = "69bb6f47aeb0f6a74c05e05960fc3da5b33edc6b";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
-      sha256 = "sha256-EQ6cgie2Rxo4hXkcWSKgToULWFWWF/aSh/BennJiyUo=";
+      sha256 = "sha256-mBBkcwsIX6VqtRzgKm7FjdkaArD/IgEMz7+UwlMyMV4=";
     };
-    date = "2023-05-31";
+    date = "2023-06-02";
   };
 }

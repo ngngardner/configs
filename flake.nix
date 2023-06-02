@@ -86,9 +86,9 @@
 
         devShells.default = pkgs.mkShell {
           packages = [
-            pkgs.rome
             pkgs.lefthook
             pkgs.nvfetcher
+            pkgs.topiary
 
             (pkgs.python3.withPackages (ps: [
               pkgs.wemake-python-styleguide

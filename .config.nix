@@ -67,26 +67,19 @@
             "*.css"
             "*.html"
             "*.jsx"
-            # "*.md"
             "*.mdx"
             "*.scss"
             "*.yaml"
           ];
         };
-        # rome = {
-        #   command = "${pkgs.rome-latest}/bin/rome";
-        #   options = [
-        #     "format"
-        #     "--write"
-        #     "indent-style=space"
-        #     "indent-size=2"
-        #   ];
-        #   includes = [
-        #     "*.js"
-        #     "*.json"
-        #     "*.ts"
-        #   ];
-        # };
+        topiary = {
+          command = "${pkgs.topiary}/bin/topiary";
+          options = ["--in-place" "--input-file"];
+          includes = [
+            "*.json"
+            "*.toml"
+          ];
+        };
       };
     };
   };
@@ -109,6 +102,7 @@
           "test"
         ];
         scopes = [
+          "deps"
           "engine"
           "hook"
           "core"

@@ -17,7 +17,7 @@ in {
       ripgrep
       treefmt
       conform
-      rome
+      topiary
 
       # python
       (pkgs.python3.withPackages (ps: [
