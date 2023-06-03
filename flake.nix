@@ -21,7 +21,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     rtx-flake = {
-      url = "github:chadac/rtx/add-nix-flake";
+      url = "github:jdxcode/rtx";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nil = {
@@ -86,6 +86,7 @@
 
         devShells.default = pkgs.mkShell {
           packages = [
+            pkgs.rtx
             pkgs.lefthook
             pkgs.nvfetcher
             pkgs.topiary
