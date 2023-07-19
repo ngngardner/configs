@@ -13,19 +13,11 @@ in {
       # tooling
       alejandra
       direnv
-      nil
       ripgrep
       treefmt
       conform
       topiary
-
-      # python
-      (pkgs.python3.withPackages (ps: [
-        pkgs.wemake-python-styleguide
-      ]))
-
-      # for non-nix projects
-      rtx
+      nixd
 
       # langs
       julia-bin
@@ -33,7 +25,7 @@ in {
 
     username = username;
     homeDirectory = homedir;
-    stateVersion = "22.11";
+    stateVersion = "23.05";
   };
 
   programs = {
@@ -46,7 +38,6 @@ in {
     direnv = {
       enable = true;
       nix-direnv.enable = true;
-      stdlib = l.readFile ./direnvrc;
     };
     git = {
       enable = true;

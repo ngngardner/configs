@@ -2,7 +2,7 @@
   description = "My Home Manager configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     devshell = {
       url = "github:numtide/devshell";
@@ -18,22 +18,6 @@
     };
     nixago-exts = {
       url = "github:nix-community/nixago-extensions";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    rtx-flake = {
-      url = "github:jdxcode/rtx";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nil = {
-      url = "github:oxalica/nil";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    naersk = {
-      url = "github:nix-community/naersk";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    poetry2nix = {
-      url = "github:nix-community/poetry2nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -69,31 +53,13 @@
       in {
         _module.args.pkgs = import nixpkgs {
           inherit system;
-          config = {
-            allowUnfree = true;
-            cudaSupport = true;
-          };
-          overlays = [
-            (import ./nix/packages/overlays.nix)
-            inputs.rtx-flake.overlay
-            inputs.naersk.overlay
-            (_: _: {
-              nil = inputs'.nil.packages.default;
-              poetry2nix = inputs'.poetry2nix.legacyPackages;
-            })
-          ];
         };
 
         devShells.default = pkgs.mkShell {
           packages = [
-            pkgs.rtx
-            pkgs.lefthook
             pkgs.nvfetcher
             pkgs.topiary
-
-            (pkgs.python3.withPackages (ps: [
-              pkgs.wemake-python-styleguide
-            ]))
+            pkgs.nix-init
           ];
           shellHook = ''
             ${(nixago.lib.${system}.makeAll configs).shellHook}

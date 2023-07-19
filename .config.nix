@@ -19,12 +19,10 @@
         ".config" = true;
         ".local" = true;
         ".run" = true;
-        ".ruff_cache" = true;
-        # ".editorconfig" = true;
       };
       "nixEnvSelector.nixFile" = "\${workspaceRoot}/flake.nix";
       "nix.enableLanguageServer" = true; # Enable LSP.
-      "nix.serverPath" = "nil"; # The path to the LSP server executable.
+      "nix.serverPath" = "${pkgs.nixd}/bin/nixd"; # The path to the LSP server executable.
     };
     output = output;
     format = "json";
