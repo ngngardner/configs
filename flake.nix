@@ -57,6 +57,7 @@
 
         devShells.default = pkgs.mkShell {
           packages = [
+            pkgs.lefthook
             pkgs.nvfetcher
             pkgs.topiary
             pkgs.nix-init
