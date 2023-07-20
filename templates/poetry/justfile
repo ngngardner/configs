@@ -1,0 +1,13 @@
+default:
+    just list
+
+fmt +FILES='.':
+    treefmt "{{FILES}}"
+
+lint-py +FILES:
+    flake8heavened {{FILES}}
+    pylyzer {{FILES}}
+
+lint +FILES='.':
+    treefmt --fail-on-change {{FILES}}
+    # todo filter py files

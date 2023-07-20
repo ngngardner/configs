@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "CONFIGURE-ME"
+version = "0.1.0"
+description = ""
+authors = [ "Noah Gardner <ngngardner@gmail.com>" ]
+readme = "README.md"
+packages = [ { include = "CONFIGURE-ME" } ]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+flakeheaven = "*"
+pylint = "*"
+wemake-python-styleguide = "^0.17.0"
+
+[tool.flakeheaven.plugins]
+mccabe = [ "+*" ]
+pep8-naming = [ "+*" ]
+pyflakes = [ "+*" ]
+pylint = [ "+*" ]
+pycodestyle = [ "+*" ]
+wemake-python-styleguide = [ "+*" ]
+
+flake8-bandit = [ "+*" ]
+flake8-broken-line = [ "+*" ]
+flake8-bugbear = [ "+*" ]
+flake8-commas = [ "+*" ]
+flake8-comprehensions = [ "+*" ]
+flake8-darglint = [ "+*" ]
+flake8-debugger = [ "+*" ]
+flake8-docstrings = [ "+*" ]
+flake8-eradicate = [ "+*" ]
+flake8-isort = [ "+*" ]
+flake8-quotes = [ "+*" ]
+flake8-rst-docstrings = [ "+*" ]
+flake8-string-format = [ "+*" ]
+
+[build-system]
+requires = [ "poetry-core" ]
+build-backend = "poetry.core.masonry.api"

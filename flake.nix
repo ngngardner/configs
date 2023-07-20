@@ -35,9 +35,17 @@
   in
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = nixpkgs.lib.systems.flakeExposed;
-      imports = [
-        devshell.flakeModule
-      ];
+      imports = [devshell.flakeModule];
+
+      flake = {
+        templates = {
+          poetry = {
+            path = ./templates/poetry;
+            description = "A template for a poetry project";
+          };
+        };
+      };
+
       perSystem = {
         self',
         system,
